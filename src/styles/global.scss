@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f8f8f8;
+  color: #29292e;
+}
+
+body, input, button, textarea{
+  //tamanho_font  tamanho_letra  (familia_fonte , prox_font caso a anterior não carregue 
+  font: 400 16px 'Roboto', sans-serif;
+}
