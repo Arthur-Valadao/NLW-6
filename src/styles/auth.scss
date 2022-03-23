@@ -1,6 +1,6 @@
 #page-auth {
   display: flex;
-  align-items:stretch;
+  align-items: stretch;
   height: 100vh;
 
   aside {
@@ -49,8 +49,14 @@
     align-items: stretch;
     text-align: center;
 
-    > img {
+    >img {
       align-self: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 64px 0 24px;
+      font-family: 'Poppins', sans-serif;
     }
 
     form {
@@ -66,11 +72,22 @@
         margin-top: 16px;
       }
 
-      button, input {
+      button,
+      input {
         width: 100%;
       }
     }
-  } 
+
+    p {
+      font-size: 14px;
+      color: #737380;
+      margin-top: 16px;
+
+      a {
+        color: #e559f9;
+      }
+    }
+  }
 
   .create-room {
     margin-top: 64px;
@@ -106,7 +123,7 @@
     display: flex;
     align-items: center;
 
-    &::before{
+    &::before {
       content: '';
       flex: 1;
       height: 1px;
@@ -114,7 +131,7 @@
       margin-right: 16px;
     }
 
-    &::after{
+    &::after {
       content: '';
       flex: 1;
       height: 1px;
@@ -123,4 +140,3 @@
     }
   }
 }
-
