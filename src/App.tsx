@@ -1,15 +1,24 @@
 // import { Home } from './pages/Home';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Home } from './pages/Home';
-// import { NewRoom } from './pages/NewRoom';
+import { NewRoom } from './pages/NewRoom';
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <Routes>
       <Route path="/" element={<Home />} />
-    </BrowserRouter>
+      <Route path="rooms/new" element={<NewRoom />} />
+      <Route
+        path="*"
+        element={
+          <main style={{ padding: "1rem" }}>
+            <p>There's nothing here!</p>
+          </main>
+        }
+      />
+    </Routes>
   );
 }
 
