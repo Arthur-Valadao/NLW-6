@@ -5,13 +5,20 @@ import googleIcon from '../assets/images/google-icon.svg'
 
 import '../styles/auth.scss'
 import { Button } from '../components/Button'
+import { auth, firebase } from '../services/firebase'
 
 export function Home() {
 
   const navigate = useNavigate();
 
-  function navigateToNewRoom() {
-    navigate("rooms/new");
+  function handleCreateRoom() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    auth.signInWithPopup(provider).then(result => {
+      console.log(result);
+    })
+
+    // navigate("rooms/new");
   }
 
   return (
@@ -25,7 +32,7 @@ export function Home() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
-          <button onClick={navigateToNewRoom} className="create-room">
+          <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIcon} alt="Logo do Google" />
             Crie sua sala com o Google
           </button>
